@@ -3,59 +3,53 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./weather.css">
-
+    <title>Weather App</title>
 </head>
 
-<body class="bg-[url('/img/clouds.jpg')] bg-cover no-repeat">
-    <main>
-        
-        <div class="flex justify-end m-4">
-            <div class="flex items-center justify-between rounded-xl bg-white p-2">
-                <input type="text" placeholder="Your ville" />
-                <img src="\img\search.png" alt="" class="w-4 h-4 ml-3">
+<body class="bg-[url('/img/clouds.jpg')] bg-cover bg-no-repeat min-h-screen text-gray-900">
+    <main class="container mx-auto p-4">
+        <div class="flex justify-end mb-8">
+            <div class="flex items-center bg-white rounded-xl shadow-md p-3">
+                <input type="text" placeholder="Enter your city" class="focus:outline-none text-gray-700"/>
+                <img src="/img/search.png" alt="Search icon" class="w-5 h-5 ml-3" >
             </div>
         </div>
-        
-        <div class=" mx-auto h-72 flex justify-center">
-        
-            <div class="bg-cyan-300 opacity w-1/2 flex justify-between px-80	">
-                <div class="bg-cyan-200 h-[30%] w-[150px]">
-                    <p>trdtd</p>
-                    <img src="" alt="">
+        <div class="flex  h-76">
+            <div class="bg-sky-500 rounded-2xl opacity-90  w-2/3 p-4 shadow-lg">
+              <div class="flex ">
+                <div class="bg-sky-400 p-2 rounded-lg w-1/2 text-center flex">
+                  <div>
+                    <p class="text-lg font-medium text-white">Coucher</p>
+                    <p class="text-white mt-2">18:48</p>
+                  </div>
+                    <img src="/img/sunset-.png" alt="Weather icon" class="mx-auto w-16 h-16  ">
                 </div>
-                <div class="bg-cyan-200 h-[30%] w-[150px] "> kghjkg</div>
-            </div>
-            <div class="w-1/2 flex justify-end items-center my-6">
-                <div class="ml-4">
-                    <h2 class="text-6xl font-extrabold pt-32 pr-10 text-white	">23°C</h2>
-                    <P class="text-lg text-white">Afourer</P>
+                <div class="bg-sky-400 p-2 rounded-lg w-1/2 ml-4 text-center flex ">
+                   <div > 
+                    <h1 class="text-lg font-medium text-white">Humidity</h1>
+                    <p class="text-white text-2xl">45%</p>
+                   </div>
+                    <img src="/img/humidity.png" alt="Weather icon" class="mx-auto w-16 h-16">
+                </div>
+              </div>
+                <div class="bg-sky-400 p-2 mt-4 w-3/3 rounded-lg flex justify-center text-center ">
+                 <div >
+                    <h1 class="text-lg text-white">Wind Speed</h1>
+                    <p class="text-white text-2xl">12 km/h</p>
+                 </div>
+                    <img src="/img/wind.png" alt="Weather icon" class="mx-auto w-16 h-16">
                 </div>
             </div>
-
-        </div>
-
-        <div>
-            <div>title </div>
-            <div>
-
-                <p></p>
-                <img src="" alt="">
-                <p></p>
-            </div>
-            <div>
-                <p></p>
-                <img src="" alt="">
-                <p></p>
-            </div>
-            <div>
-                <p></p>
-                <img src="" alt="">
-                <p></p>
+            <div class="w-1/3 flex flex-col px-8  items-end">
+                <h2 class="text-6xl font-extrabold text-white">23°C</h2>
+                <p class="text-lg text-white mt-4">Afourer</p>
             </div>
         </div>
+
+        
     </main>
     <script src="weather.js"></script>
 </body>
