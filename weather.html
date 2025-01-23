@@ -16,7 +16,7 @@
          
             <div class="flex items-center bg-white rounded-xl shadow-md p-3 w-full max-w-sm">
                 <input type="text" placeholder="Enter your city" class="focus:outline-none text-gray-700 flex-grow" />
-                 <button class="btn btn-primary w-8 h-8 ">🔍</button>
+                 <button class="btn btn-primary w-8 h-8 "><img src="img/search.png"></button>
             </div>
         
         </div>
@@ -37,7 +37,7 @@
                     <div class="bg-sky-400 opacity-80 p-4 rounded-lg text-center flex items-center justify-between lg:w-1/2">
                         <div>
                             <h1 class="text-lg font-medium text-white">Humidity</h1>
-                            <p class="text-white text-2xl">45%</p>
+                            <p id="humidity" class="text-white text-2xl">45%</p>
                         </div>
                         <img src="/img/humidity.png" alt="Weather icon" class="w-16 h-16">
                     </div>
@@ -46,17 +46,17 @@
                 <div class="bg-sky-400 opacity-80 p-4 mt-4 rounded-lg flex justify-between items-center text-center">
                     <div>
                         <h1 class="text-lg text-white">Wind Speed</h1>
-                        <p class="text-white text-2xl">12 km/h</p>
+                        <p id="windspeed" class="text-white text-2xl">12 km/h</p>
                     </div>
                     <img src="/img/wind.png" alt="Weather icon" class="w-16 h-16">
                 </div>
             </div>
 
             <div class="w-full lg:w-1/3 flex flex-col items-center lg:items-end px-4 mt-8 lg:mt-0">
-                <h2 class="text-6xl font-extrabold text-white">23°C</h2>
+                <h2 id="temperat" class="text-6xl font-extrabold text-white">23°C</h2>
                 <p class="text-lg text-white mt-2">23° => 8°</p>
                <div class="flex flex-row-reverse">
-                <p class="text-lg text-white mt-4">Afourer</p>
+                <p  id="city" class="text-lg text-white mt-4">Afourer</p>
                 <img src="img/sun.png" alt="" class="h-16 w-16 mr-2">
             </div>
             </div>
@@ -64,9 +64,9 @@
     </main>
 
     <section class="mt-8 ">
-        <div class="bg-[#117ECB] rounded-2xl opacity-90 p-6 ">
+        <div class="bg-[#117ECB] rounded-2xl opacity-90 p-6 mx-4 bottom-6  ">
             <h1 class="text-3xl text-white mb-4">Prévisions</h1>
-            <div class="space-y-4 flex justify-between items-center ">
+            <div class="space-y-4 flex justify-between items-center md:justify-between items-center ">
                 <div >
                     <p class="text-lg text-white ">Lun.</p>
                     <img src="/img/sun.png" alt="Sun icon" class="w-8 h-8">
@@ -83,18 +83,19 @@
                     <p class="text-lg text-white">8° => 26°</p>
                 </div>
                 <div>
-                    <p class="text-lg text-white">Mer.</p>
+                    <p class="text-lg text-white">Jeu.</p>
                     <img src="/img/sun.png" alt="Sun icon" class="w-8 h-8">
                     <p class="text-lg text-white">8° => 26°</p>
                 </div>
                 <div>
-                    <p class="text-lg text-white">Mer.</p>
+                    <p class="text-lg text-white">Ven.</p>
                     <img src="/img/sun.png" alt="Sun icon" class="w-8 h-8">
                     <p class="text-lg text-white">8° => 26°</p>
                 </div>
             </div>
         </div>
     </section>
+    <script src="weather.js"></script>
 </body>
 
 </html>
