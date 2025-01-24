@@ -12,10 +12,10 @@
 <body class="bg-[url('/img/clouds.jpg')] bg-cover bg-no-repeat min-h-screen text-gray-900">
     <main class="container mx-auto p-4">
         
-        <div class="flex justify-end mb-8">
+        <div  class="search flex justify-end mb-8">
          
             <div class="flex items-center bg-white rounded-xl shadow-md p-3 w-full max-w-sm">
-                <input type="text" placeholder="Enter your city" class="focus:outline-none text-gray-700 flex-grow" />
+                 <input type="text" placeholder="Enter your city" class="focus:outline-none text-gray-700 flex-grow" />
                  <button class="btn btn-primary w-8 h-8 "><img src="img/search.png"></button>
             </div>
         
@@ -27,9 +27,9 @@
                 <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
 
                     <div class="bg-sky-400 opacity-80 p-4 rounded-lg text-center flex items-center justify-between lg:w-1/2">
-                        <div>
-                            <p class="text-lg font-medium text-white">Coucher</p>
-                            <p class="text-white mt-2">18:48</p>
+                        <div >
+                            <h1 class="text-lg font-medium text-white">Pressure</h1>
+                            <p id="pressure" class="text-white mt-2">18bar</p>
                         </div>
                         <img src="/img/sunset-.png" alt="Weather icon" class="w-16 h-16">
                     </div>
@@ -54,10 +54,13 @@
 
             <div class="w-full lg:w-1/3 flex flex-col items-center lg:items-end px-4 mt-8 lg:mt-0">
                 <h2 id="temperat" class="text-6xl font-extrabold text-white">23°C</h2>
-                <p class="text-lg text-white mt-2">23° => 8°</p>
+                <p class="text-lg text-white mt-2">
+                    <span id="temp_max"></span>
+                     =>
+                     <span id="temp_min"></span> </p>
                <div class="flex flex-row-reverse">
                 <p  id="city" class="text-lg text-white mt-4">Afourer</p>
-                <img src="img/sun.png" alt="" class="h-16 w-16 mr-2">
+                <img src="img/sun.png" alt="weather icon" id="weatherIcon" class="WeatherIcon h-16 w-16 mr-2">
             </div>
             </div>
         </div>
@@ -69,27 +72,27 @@
             <div class="space-y-4 flex justify-between items-center md:justify-between items-center ">
                 <div >
                     <p class="text-lg text-white ">Lun.</p>
-                    <img src="/img/sun.png" alt="Sun icon" class="w-8 h-8">
+                    <img src="/img/sun.png" alt="Sun icon" class="WeatherIcon w-8 h-8">
                     <p class="text-lg text-white">8° => 26°</p>
                 </div>
                 <div>
                     <p class="text-lg text-white">Mar.</p>
-                    <img src="/img/cloudy.png" alt="Cloudy icon" class="w-8 h-8">
+                    <img src="/img/cloudy.png" alt="Cloudy icon" class="WeatherIcon w-8 h-8">
                     <p class="text-lg text-white">8° => 26°</p>
                 </div>
                 <div>
                     <p class="text-lg text-white">Mer.</p>
-                    <img src="/img/sun.png" alt="Sun icon" class="w-8 h-8">
+                    <img src="/img/sun.png" alt="Sun icon" class="WeatherIcon w-8 h-8">
                     <p class="text-lg text-white">8° => 26°</p>
                 </div>
                 <div>
                     <p class="text-lg text-white">Jeu.</p>
-                    <img src="/img/sun.png" alt="Sun icon" class="w-8 h-8">
+                    <img src="/img/sun.png" alt="Sun icon" class="WeatherIcon w-8 h-8">
                     <p class="text-lg text-white">8° => 26°</p>
                 </div>
                 <div>
                     <p class="text-lg text-white">Ven.</p>
-                    <img src="/img/sun.png" alt="Sun icon" class="w-8 h-8">
+                    <img src="/img/sun.png" alt="Sun icon" class="WeatherIcon w-8 h-8">
                     <p class="text-lg text-white">8° => 26°</p>
                 </div>
             </div>
