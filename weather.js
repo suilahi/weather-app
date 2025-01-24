@@ -5,18 +5,18 @@ const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button")
-
+ 
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     var data = await response.json();
-    console.log(data.weather)
+    // console.log(data.weather)
     const iconLink = ` https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
     document.getElementById("weatherIcon").src = iconLink
     document.getElementById("city").innerHTML = data.name;
     document.getElementById("pressure").innerHTML = data.main.pressure + "mbar";
-    document.getElementById("temperat").innerHTML = Math.round(data.main.temp) + "°C";
-    document.getElementById("temp_min").innerHTML = Math.round(data.main.temp_min) + "°C";
-    document.getElementById("temp_max").innerHTML = Math.round(data.main.temp_max) + "°C";
+    document.getElementById("temperat").innerHTML = data.main.temp + "°C";
+    document.getElementById("temp_min").innerHTML = data.main.temp_min + "°C";
+    document.getElementById("temp_max").innerHTML = data.main.temp_max + "°C";
     document.getElementById("windspeed").innerHTML = data.wind.speed + "km/h";
     document.getElementById("humidity").innerHTML = data.main.humidity + "%";
 
