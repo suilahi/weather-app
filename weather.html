@@ -9,7 +9,7 @@
     <title>Weather App</title>
 </head>
 
-<body class="bg-[url(/img/clouds.jpg')] bg-cover bg-no-repeat min-h-screen text-gray-900">
+<body class="bg-[url('/img/clouds.jpg')] bg-cover bg-no-repeat min-h-screen text-gray-900">
     <main class="container mx-auto p-4">
         
         <div  class="search flex justify-end mb-8">
@@ -17,7 +17,7 @@
             <div class="flex items-center bg-white rounded-xl shadow-md p-3 w-full max-w-sm">
                 <button class="btn btn-primary w-8 h-8 "><img src="img/search.png"></button>
                  <input type="text" placeholder="Enter your city" class="focus:outline-none text-gray-700 flex-grow " />
-                 <button class="w-8 H-8"><img src="img/local.png" alt=""></button>
+                 <button class="w-8 H-8  " id="local"><img src="img/local.png" alt=""></button>
             </div>
         
         </div>
@@ -32,7 +32,7 @@
                             <h1 class="text-lg font-medium text-white">Pressure</h1>
                             <p id="pressure" class="text-white mt-2">18bar</p>
                         </div>
-                        <img src="/img/sunset-.png" alt="Weather icon" class="w-16 h-16">
+                        <img src="/img/pressure.png" alt="Weather icon" class="w-16 h-16">
                     </div>
 
                     <div class="bg-sky-400 opacity-80 p-4 rounded-lg text-center flex items-center justify-between lg:w-1/2">
@@ -55,46 +55,43 @@
 
             <div class="w-full lg:w-1/3 flex flex-col items-center lg:items-end px-4 mt-8 lg:mt-0">
                 <h2 id="temperat" class="text-6xl font-extrabold text-white">23°C</h2>
-                <p class="text-lg text-white mt-2">
-                    <span id="temp_max"></span>
-                     =>
-                     <span id="temp_min"></span> </p>
+                <p id="temp_min" class="text-lg text-white mt-2">8° </p>
                <div class="flex flex-row-reverse">
-                <p  id="city" class="text-lg text-white mt-4">Afourer</p>
+                <p id="city" class="text-lg text-white mt-4">Afourer</p>
                 <img src="img/sun.png" alt="weather icon" id="weatherIcon" class="WeatherIcon h-16 w-16 mr-2">
             </div>
             </div>
         </div>
     </main>
 
-    <section class="mt-8 ">
-        <div class="bg-[#117ECB] rounded-2xl opacity-90 p-6 mx-4 bottom-6  ">
+    <section class="mt-8  ">
+        <div class="bg-[#117ECB] rounded-lg justify-between opacity-90 p-4  bottom-6  ">
             <h1 class="text-3xl text-white mb-4">Prévisions</h1>
-            <div class="space-y-4 flex justify-between items-center md:justify-between items-center ">
+            <div class=" flex justify-between items-center md:justify-between items-center  ">
                 <div >
-                    <p class="text-lg text-white ">Lun.</p>
-                    <img src="/img/sun.png" alt="Sun icon" class="WeatherIcon w-8 h-8">
-                    <p class="text-lg text-white">8° => 26°</p>
+                    <p id="day1" class="text-lg text-white">Lundi</p>
+                    <img id="icon1" src="/img/sun.png" alt="Sun icon" class="WeatherIcon w-8 h-8">
+                    <p id="temp1" class="text-lg text-white"> 26°</p>
                 </div>
                 <div>
-                    <p class="text-lg text-white">Mar.</p>
-                    <img src="/img/cloudy.png" alt="Cloudy icon" class="WeatherIcon w-8 h-8">
-                    <p class="text-lg text-white">8° => 26°</p>
+                    <p id="day2" class="text-lg text-white ">Mardi</p>
+                    <img id="icon2" src="/img/cloudy.png" alt="Cloudy icon" class=" w-8 h-8">
+                    <p id="temp2" class="text-lg text-white"> 26°</p>
                 </div>
                 <div>
-                    <p class="text-lg text-white">Mer.</p>
-                    <img src="/img/sun.png" alt="Sun icon" class="WeatherIcon w-8 h-8">
-                    <p class="text-lg text-white">8° => 26°</p>
+                    <p  id="day3" class="text-lg text-white ">Mercredi</p>
+                    <img id="icon3" src="/img/sun.png" alt="Sun icon" class=" w-8 h-8">
+                    <p id="temp3" class="text-lg text-white"> 26°</p>
                 </div>
                 <div>
-                    <p class="text-lg text-white">Jeu.</p>
-                    <img src="/img/sun.png" alt="Sun icon" class="WeatherIcon w-8 h-8">
-                    <p class="text-lg text-white">8° => 26°</p>
+                    <p id="day4" class="text-lg text-white">Jeudi</p>
+                    <img id="icon4" src="/img/sun.png" alt="Sun icon" class=" w-8 h-8">
+                    <p id="temp4" class="text-lg text-white"> 26°</p>
                 </div>
                 <div>
-                    <p class="text-lg text-white">Ven.</p>
-                    <img src="/img/sun.png" alt="Sun icon" class="WeatherIcon w-8 h-8">
-                    <p class="text-lg text-white">8° => 26°</p>
+                    <p id="day5" class="text-lg text-white">Venredi</p>
+                    <img id="icon5" src="/img/sun.png" alt="Sun icon" class=" w-8 h-8">
+                    <p id="temp5" class="text-lg text-white"> 26°</p>
                 </div>
             </div>
         </div>
